@@ -37,7 +37,7 @@ from tools.data_loading import act_window_path
 # ============================================================
 
 ACT_WINDOW_PATH = act_window_path(cfg.NPIPE_ACT_WINDOW, "baseline")
-NPIPE_PS_MASK_PATH = "/mn/stornext/u3/johanres/Documents/Python/NPIPE_bi/PR4/masks/LFI_HFI_ps/combined_ps.fits"
+NPIPE_PS_MASK_PATH = "path_to_planck_point_sources/combined_ps.fits"
 
 OUTPUT_DIR = os.path.dirname(__file__)
 OUTPUT_FITS = os.path.join(OUTPUT_DIR, "npipe_act_window_with_ps.fits")
