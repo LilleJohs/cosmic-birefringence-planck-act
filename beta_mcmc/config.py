@@ -18,12 +18,10 @@ NPIPE_MASK_PERCENT = 0
 
 # Band / frequency selection (must match what was used in likelihood_config.py)
 ACT_BANDS = ["pa4_f220", "pa5_f090", "pa5_f150", "pa6_f090", "pa6_f150"]
-#ACT_BANDS = []
-#NPIPE_FREQS = []  # GHz
 NPIPE_FREQS = [30, 44, 70, 100, 143, 217, 353]  # GHz
 
 USE_SACC_AA = True  # Use official SACC for ACT×ACT block
-AP_ONLY = True      # If True, use only ACT×NPIPE cross-spectra from unified .npz
+AP_ONLY = False      # If True, use only ACT×NPIPE cross-spectra from unified .npz
 
 # NPIPE-only binning (only used when ACT_BANDS is empty):
 #   "uniform"     — uniform bins with NPIPE_DELTA_ELL width
@@ -51,9 +49,8 @@ MCMC_N_BURN = 1000
 # Filamentary dust EB model (E&K 2022, Eqs. 10-18)
 # When True, adds F matrix to rotation formalism for NPIPE blocks only.
 # Introduces len(DUST_ELL_BINS) free A_l amplitude parameters with flat positive priors.
-USE_DUST_EB_MODEL = False
-#DUST_ELL_BINS = [(51, 130), (131, 210), (211, 510), (511, 2025)]
-DUST_ELL_BINS = [(56, 135), (136, 215), (216, 575)]# (576, 2025)]
+USE_DUST_EB_MODEL = True
+DUST_ELL_BINS = [(56, 135), (136, 215), (216, 575)]
 N_DUST_BINS = len(DUST_ELL_BINS)
 
 # ============================================================

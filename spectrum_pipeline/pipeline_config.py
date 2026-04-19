@@ -15,15 +15,12 @@ from tools.binning import get_unified_binning_file
 # ============================================================
 
 ACT_ARRAY_BANDS = ["pa4_f220", "pa5_f090", "pa5_f150", "pa6_f090", "pa6_f150"]
-#ACT_ARRAY_BANDS = ["pa5_f090", "pa5_f150", "pa6_f090", "pa6_f150"]
-#ACT_ARRAY_BANDS = ["pa5_f150"]
 
 # ============================================================
 # NPIPE configuration
 # ============================================================
 
 NPIPE_FREQS = [30, 44, 70, 100, 143, 217, 353]
-#NPIPE_FREQS = [100]
 NPIPE_SPLITS = ["A", "B"]
 NPIPE_NSIDE = {30: 1024, 44: 1024, 70: 1024, 100: 2048, 143: 2048, 217: 2048, 353: 2048}
 NPIPE_MASK_PERCENT = 30
@@ -75,7 +72,7 @@ NPIPE_MASK_SUBDIR = "npipe_full_sky_mask" if NPIPE_MASK_PERCENT == 0 else f"npip
 # Spectrum types to compute
 # ============================================================
 
-COMPUTE_ACT_MASK = False    # ACT×ACT + ACT×NPIPE + NPIPE×NPIPE(ACT mask)
+COMPUTE_ACT_MASK = True    # ACT×ACT + ACT×NPIPE + NPIPE×NPIPE(ACT mask)
 COMPUTE_ACT_X_ACT_ONLY = False  # Only run ACT×ACT, skip ACT×NPIPE and NPIPE×NPIPE
 COMPUTE_NPIPE_FULL_SKY_MASK = True   # NPIPE×NPIPE (NPIPE mask, controlled by NPIPE_MASK_PERCENT)
 

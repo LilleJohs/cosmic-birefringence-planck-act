@@ -30,7 +30,7 @@ MAKE_PLOTS = True
 # When True: use official ACT SACC file for ACT×ACT spectra and covariance.
 # Skips all per-split AA computation. Cross-block covariance (AA↔AP, AA↔PP)
 # still computed from per-split Wick contractions, contracted with averaging weights.
-USE_SACC_AA = False
+USE_SACC_AA = True
 
 # ============================================================
 # Spectrum corrections (applied when loading spectra for likelihood)
@@ -80,7 +80,7 @@ ACT_BANDS = ["pa4_f220", "pa5_f090", "pa5_f150", "pa6_f090", "pa6_f150"]
 #ACT_BANDS = []
 # NPIPE frequencies to include (subset of pipeline_config.NPIPE_FREQS)
 # Set to [] to exclude NPIPE (ACT-only likelihood)
-NPIPE_FREQS = []
+NPIPE_FREQS = [30, 44, 70, 100, 143, 217, 353]
 #NPIPE_FREQS = [70, 100, 143, 217]
 NPIPE_SPLITS = ["A", "B"]
 
@@ -102,8 +102,7 @@ NPIPE_ONLY_BINNING = "act_binning"
 # NPIPE×NPIPE (all masks): ell range and bin width
 # With "act_binning", ELL_MIN and ELL_MAX filter bins via active_bins
 # (bins with center < ELL_MIN or > ELL_MAX are masked out).
-#NPIPE_ELL_MIN = 56
-NPIPE_ELL_MIN = 600.5
+NPIPE_ELL_MIN = 56.5
 NPIPE_ELL_MAX = 2000.5
 NPIPE_DELTA_ELL = 20
 
@@ -115,7 +114,7 @@ NPIPE_ACT_MASK_ELL_MIN = 80.5
 # ============================================================
 
 # Compute psi_ell from 353 GHz and include in likelihood .npz
-COMPUTE_PSI_ELL = False
+COMPUTE_PSI_ELL = True
 
 # Per-ACT-band minimum ell for active_bins mask
 ACT_ELL_MIN_PER_BAND = {
