@@ -22,3 +22,6 @@ Before running the code, you need to download all the necessary files and add th
  
 # Need help?
 If you struggle with anything, feel free to ask me for help! Please send me an email here: j.r.eskilt@astro.uio.no. You can also open a Github issue.
+
+# Acknowledgment of AI-assisted tools
+This codebase was developed with the help of Anthropic's Claude large language models. It aided the writing, debugging and commenting of the code. All scientific decisions were my own, and I verified the code myself.
