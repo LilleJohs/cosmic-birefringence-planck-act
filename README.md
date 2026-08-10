@@ -25,3 +25,7 @@ If you struggle with anything, feel free to ask me for help! Please send me an e
 
 # Acknowledgment of AI-assisted tools
 This codebase was developed with the help of Anthropic's Claude large language models. It aided the writing, debugging and commenting of the code. All scientific decisions were my own, and I verified the code myself.
+
+## Citation
+Feel free to use the code as you see fit, but if you use it for published results, please cite
+* J. R. Eskilt, arXiv preprint (2026), arXiv:2608.06480 [astro-ph.CO]
